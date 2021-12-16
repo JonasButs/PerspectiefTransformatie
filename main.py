@@ -7,8 +7,8 @@ from PIL import Image
 
 
 # Load images
-img1 = cv2.imread("IMAGE_PATH_R")
-img2 = cv2.imread("IMAGE_PATH_L")
+img1 = cv2.imread("../images/image_for_testing_1.jpg")
+img2 = cv2.imread("../images/image_for_testing_1.jpg")
 
 # Create our ORB detector and detect keypoints and descriptors
 orb = cv2.ORB_create(nfeatures=2000)
