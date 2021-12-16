@@ -3,9 +3,8 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 from PIL import Image
-import time
 
-t_start = time.perf_counter()
+
 
 # Load images
 img1 = cv2.imread("IMAGE_PATH_R")
@@ -30,7 +29,6 @@ good = []
 for m, n in matches:
     if m.distance < 0.6 * n.distance:
         good.append(m)
-print(len(matches), len(good))
 
 
 def warpImages(img1, img2, H):
@@ -75,5 +73,3 @@ if len(good) > MIN_MATCH_COUNT:
 
 else:
     print("Overlap was not good enough")
-
-print(time.perf_counter() - t_start)
